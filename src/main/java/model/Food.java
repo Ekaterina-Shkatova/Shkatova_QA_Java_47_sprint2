@@ -15,9 +15,6 @@ public class Food implements Discountable{
         return Discount.DISCOUNT;
     }
 
-
-
-
 }
 
 
