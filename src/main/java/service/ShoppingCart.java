@@ -1,7 +1,6 @@
 package service;
 
 import model.Food;
-import model.constants.Discount;
 
 public class ShoppingCart {
 
@@ -21,10 +20,9 @@ public class ShoppingCart {
 
     public float getCartPriceDiscounted() {
         float PriceDiscounted = 0;
-        Discount discount = new Discount();
         for (int i = 0; i < arrFood.length; i++) {
-            discount.discount = (float) arrFood[i].getDiscount();
-            PriceDiscounted = PriceDiscounted + arrFood[i].price * (1 - discount.discount/100);
+            float discount = arrFood[i].getDiscount();
+            PriceDiscounted = PriceDiscounted + arrFood[i].price * (1 - discount/100);
         }
         return PriceDiscounted;
     }

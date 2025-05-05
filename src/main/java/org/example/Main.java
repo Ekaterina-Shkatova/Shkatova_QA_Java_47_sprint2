@@ -1,19 +1,21 @@
 package org.example;
 
 import model.Food;
+import model.Meat;
+import model.Apple;
 import service.ShoppingCart;
 import model.constants.Colour;
 
 public class Main {
     public static void main(String[] args) {
 
-        String redColor = Colour.colourRed;
-        String greenColor = Colour.colourGreen;
+        String redColor = Colour.COLOUR_RED;
+        String greenColor = Colour.COLOUR_GREEN;
 
         Food food = new Food();
-        Food.Meat meat = food.new Meat(5, 100);
-        Food.Apple appleRed = food.new Apple(10, 50, redColor);
-        Food.Apple appleGreen = food.new Apple(8, 60, greenColor);
+        Food meat = new Meat(5, 100);
+        Food appleRed = new Apple(10, 50, redColor);
+        Food appleGreen = new Apple(8, 60, greenColor);
 
         Food[] arrFood = {meat, appleRed, appleGreen};
 
