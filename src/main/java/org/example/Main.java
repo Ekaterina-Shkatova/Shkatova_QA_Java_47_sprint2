@@ -12,7 +12,6 @@ public class Main {
         String redColor = Colour.COLOUR_RED;
         String greenColor = Colour.COLOUR_GREEN;
 
-        Food food = new Food();
         Food meat = new Meat(5, 100);
         Food appleRed = new Apple(10, 50, redColor);
         Food appleGreen = new Apple(8, 60, greenColor);

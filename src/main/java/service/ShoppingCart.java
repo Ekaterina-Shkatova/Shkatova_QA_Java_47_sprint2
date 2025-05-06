@@ -13,27 +13,27 @@ public class ShoppingCart {
     public float getCartPrice() {
         float cartPrice = 0;
         for (int i = 0; i < arrFood.length; i++) {
-            cartPrice = cartPrice + arrFood[i].price;
+            cartPrice = cartPrice + arrFood[i].amount * arrFood[i].price;
         }
         return cartPrice;
     }
 
     public float getCartPriceDiscounted() {
-        float PriceDiscounted = 0;
+        float priceDiscounted = 0;
         for (int i = 0; i < arrFood.length; i++) {
             float discount = arrFood[i].getDiscount();
-            PriceDiscounted = PriceDiscounted + arrFood[i].price * (1 - discount/100);
+            priceDiscounted = priceDiscounted + arrFood[i].amount * arrFood[i].price * (1 - discount/100);
         }
-        return PriceDiscounted;
+        return priceDiscounted;
     }
 
     public float getCartPriceVeg() {
-        float Price = 0;
+        float price = 0;
         for (int i = 0; i < arrFood.length; i++) {
             if (arrFood[i].isVegeterian) {
-                Price = Price + arrFood[i].price;
+                price = price + arrFood[i].amount * arrFood[i].price;
             }
         }
-        return Price;
+        return price;
     }
 }
